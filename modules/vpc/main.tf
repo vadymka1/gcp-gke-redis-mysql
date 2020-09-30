@@ -31,31 +31,3 @@ module "vpc" {
     }
 
 }
-
-# resource "google_compute_network" "vpc" {
-#   name                    = var.project
-#   auto_create_subnetworks = "false"
-# }
-
-# # Subnet
-# resource "google_compute_subnetwork" "subnet" {
-#   name          = var.subnetwork
-#   region        = var.region
-#   network       = google_compute_network.vpc.name
-#   ip_cidr_range = "10.2.0.0/16"
-
-  
-#   secondary_ip_range = {
-#         # (var.subnetwork) = [
-#             {
-#                 range_name    = join("-", [var.subnetwork, "pods"])
-#                 ip_cidr_range = "10.184.0.0/14"
-#             },
-#             {
-#                 range_name    = join("-", [var.subnetwork, "services"])
-#                 ip_cidr_range = "10.188.0.0/20"
-#             },
-#         # ]
-#   }
-
-# }

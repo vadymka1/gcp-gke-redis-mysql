@@ -6,5 +6,4 @@ output "network_name" {
 
 output "subnet_name" {
     value = module.vpc.subnets_names[0]
-    # value = "${google_compute_subnetwork.subnet.name}"
 }
